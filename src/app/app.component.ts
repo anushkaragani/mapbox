@@ -20,21 +20,17 @@ export class AppComponent {
 
   constructor() {
     mapboxgl.accessToken = environment.mapboxKey;
-
-
   }
 
 
   ngOnInit() {
-
-  //  this.token= environment.mapboxKey;
       this.map = new mapboxgl.Map({
         container: 'map',
         style: this.style,
         zoom: 6,
         center: [this.lng, this.lat]
     });
-    // Add map controls
+
     this.map.addControl(new mapboxgl.NavigationControl());
     this.geocoding();
   }
@@ -70,7 +66,4 @@ export class AppComponent {
       this.latitude = e.result.geometry.coordinates[1];
     })
   }
-
-
-
 }
