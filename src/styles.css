@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+
+html,body{
+  width: 99%;
+  height: 100%;
+}
